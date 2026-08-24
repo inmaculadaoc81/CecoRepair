@@ -31,6 +31,7 @@ a{text-decoration:none;color:inherit}
 .links{display:flex;gap:23px;align-items:center;font-size:14px;font-weight:850}
 .links a:hover{color:var(--cyan2)}
 .form-nav{padding:11px 16px;border-radius:999px;background:var(--dark);color:#fff!important}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;color:var(--dark);border-radius:11px;padding:10px 14px;font-weight:900;font:inherit;cursor:pointer}
 
 /* Hero */
 .hero{
@@ -191,7 +192,9 @@ footer{background:var(--dark);color:#fff;padding:34px 0}
 .footer img{height:38px;max-width:260px;background:#fff;padding:6px 10px;border-radius:10px}
 
 @media(max-width:920px){
-  .links{display:none}
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;left:0;right:0;top:78px;background:#fff;padding:18px 20px 22px;flex-direction:column;align-items:flex-start;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
   .hero-grid,.care-grid,.contact-grid{grid-template-columns:1fr}
   .problem-grid{grid-template-columns:repeat(2,1fr)}
   .steps-grid{grid-template-columns:repeat(2,1fr)}

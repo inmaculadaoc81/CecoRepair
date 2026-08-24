@@ -18,13 +18,14 @@
 <header class="header">
   <div class="wrap nav">
     <a href="#inicio"><img class="logo" src="/assets/logo-cecotecrepair.png" alt="CecotecRepair"></a>
-    <nav class="links">
+    <nav class="links" id="mainMenu">
       <a href="#problemas">Qué le pasa</a>
       <a href="#revision">Qué revisamos</a>
       <a href="#proceso">Cómo funciona</a>
       <a href="#opiniones">Opiniones y vídeos</a>
       <a class="form-nav" href="#contacto">Formulario de contacto</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainMenu">Menú</button>
   </div>
 </header>
 
@@ -243,6 +244,17 @@
 </footer>
 
 <script>
+const menuBtn=document.getElementById('menuBtn');
+const mainMenu=document.getElementById('mainMenu');
+menuBtn?.addEventListener('click',()=>{
+  const open=mainMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+mainMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mainMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+}));
+
 const form=document.getElementById('contact-form');
 const statusEl=document.getElementById('form-status');
 
