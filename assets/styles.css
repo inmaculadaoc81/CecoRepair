@@ -68,7 +68,7 @@ a{text-decoration:none;color:inherit}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:56px;align-items:start}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--cyan2);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .eyebrow::before{content:"";width:34px;height:4px;border-radius:20px;background:var(--cyan)}
-h1{font-size:clamp(38px,4.4vw,58px);line-height:1.02;letter-spacing:-2.2px;margin:0 0 24px;max-width:790px}
+h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margin:0 0 24px;max-width:790px}
 .accent{color:var(--cyan2)}
 .diagnosis{
   display:inline-flex;align-items:center;gap:12px;margin:8px 0 26px;
@@ -154,6 +154,11 @@ section{padding:82px 0}
 .youtube{background:#c9161d}
 .trust h3{font-size:28px;margin:8px 0}
 
+/* SEO content */
+.seo-content{background:var(--soft)}
+.seo-text{max-width:880px}
+.seo-text p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 18px}
+
 /* FAQ */
 .faq{background:#f5f9fa}
 details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;margin:10px 0}
@@ -203,7 +208,7 @@ footer{background:var(--dark);color:#fff;padding:34px 0}
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
   .hero{padding-top:46px}
-  h1{font-size:40px;letter-spacing:-1.5px}
+  h1{font-size:48px;letter-spacing:-1.5px}
   .problem-grid,.steps-grid,form{grid-template-columns:1fr}
   .full{grid-column:auto}
   .hero::after,.hero-chip{display:none}

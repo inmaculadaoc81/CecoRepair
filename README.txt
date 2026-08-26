@@ -37,4 +37,32 @@ CONTACT_EMAIL=soporte@kelatos.com
 El correo de soporte no aparece en el HTML. Solo se utiliza en /api/contacto.
 
 Google Analytics:
-No se proporcionó código para esta web; no se ha añadido ninguno.
+G-FBFCK85BDS
+
+HISTORIAL: el repositorio era multipágina (19 páginas /modelos/ de
+series Conga, más varias páginas /servicios/) y se convirtió a
+one-page; esas páginas fueron eliminadas en commits anteriores. Como
+ya no existen en el sitemap actual, se ha añadido middleware.mjs para
+redirigir (301) cualquier URL antigua a la home, evitando 404 en
+enlaces indexados o backlinks antiguos. Excluye /api/* y cualquier
+ruta con extensión de archivo. Se añadió "@vercel/functions": "^2.0.3"
+a package.json como dependencia de esta función.
+
+REVISIÓN (fixes aplicados):
+- Schema.org: ya existía (LocalBusiness JSON-LD); no se ha tocado.
+- Sin teléfono, WhatsApp ni chatbot: esto es intencional (ver regla
+  especial arriba), así que NO se ha añadido botón de llamada, chat ni
+  borde blanco de chat — no aplican a esta web.
+- Sección SEO en la home: no existía. Añadida sección "Guía" (id="guia",
+  enlazada en el menú) con contenido propio sobre las series Conga,
+  averías habituales y el proceso de diagnóstico.
+- Banner de cookies: no existía. Añadido (Aceptar / Rechazar /
+  Política de privacidad → https://kelatos.com/privacy-policy/), con
+  diseño apilado a ancho completo en móvil.
+- H1 de portada reescrito, corto y directo (estilo Isra Bravo, frase
+  afirmativa sin interrogación, incluye la marca): "Tu Cecotec no
+  aspira bien. Aquí resolvemos si conviene repararlo." Tamaño del H1
+  aumentado: clamp(38-58px) → clamp(46-74px) en escritorio, 40px → 48px
+  en móvil.
+- api/contacto.js ya usaba SMTP + nodemailer (CommonJS, coherente con
+  el package.json sin "type":"module"); no requería conversión.
