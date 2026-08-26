@@ -60,9 +60,9 @@ REVISIÓN (fixes aplicados):
   Política de privacidad → https://kelatos.com/privacy-policy/), con
   diseño apilado a ancho completo en móvil.
 - H1 de portada reescrito, corto y directo (estilo Isra Bravo, frase
-  afirmativa sin interrogación, incluye la marca): "Tu Cecotec no
-  aspira bien. Aquí resolvemos si conviene repararlo." Tamaño del H1
-  aumentado: clamp(38-58px) → clamp(46-74px) en escritorio, 40px → 48px
-  en móvil.
+  totalmente afirmativa, sin interrogación ni palabras condicionales
+  como "si"/"conviene", incluye la marca): "Tu Cecotec no aspira bien.
+  Aquí lo resolvemos, podemos repararlo." Tamaño del H1 aumentado:
+  clamp(38-58px) → clamp(46-74px) en escritorio, 40px → 48px en móvil.
 - api/contacto.js ya usaba SMTP + nodemailer (CommonJS, coherente con
   el package.json sin "type":"module"); no requería conversión.
