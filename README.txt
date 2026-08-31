@@ -72,4 +72,33 @@ REVISIÓN ADICIONAL (a petición del cliente, regla general de la familia):
   .hero-tag) que sobresalía y se solapaba visualmente con la caja de
   información en anchos de tablet/escritorio medio (detectado con
   captura en vivo en AcerTech). Regla para toda la familia: no volver
-  a añadir este tipo de elemento decorativo.
+  a añadir este tipo de elemento decorativo. (La regla CSS .hero-chip
+  se deja intacta, sin uso, según práctica habitual de la familia.)
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 repetía la plantilla "Tu X no Y. Aquí Z." usada en varios repos
+  ("Tu Cecotec no aspira bien. Aquí lo resolvemos, podemos
+  repararlo."). Reescrito en formato imperativo, sin mencionar
+  diagnóstico gratuito (aquí el diagnóstico tiene coste, 20 € + IVA,
+  según la regla especial de esta web): "Repara tu robot aspirador
+  Cecotec en Madrid." (7 palabras).
+- BUG REAL — dos textos decorativos gigantes sin ninguna reducción de
+  tamaño en tablet/móvil: ".problems::after" ("CECOTEC", 175px) y
+  ".care-art::before" ("LIMPIEZA", 86px), mismo patrón ya corregido en
+  KoboldTech. Añadida reducción en tablet (100px/56px) y móvil
+  (56px/40px). El ticker ".hero::after" ya se ocultaba correctamente
+  en móvil, no se ha tocado.
+- La casilla de política de privacidad existía pero el texto no
+  enlazaba a ningún sitio. Añadido el enlace estándar de la familia a
+  https://kelatos.com/privacy-policy/, resaltado en azul.
+- Añadida franja de aviso de servicio técnico independiente debajo del
+  menú (no existía). Verificado antes que .header no usa
+  display:flex directamente.
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- No aplica la regla de paridad de iconos en los CTA: esta web solo
+  tiene un botón de acción ("Cuéntanos qué le ocurre", enlaza al
+  formulario), sin teléfono ni WhatsApp, según la regla especial de
+  contacto exclusivo por formulario. Verificado: schema.org
+  correctamente sin campo "telephone" (coherente con esa misma
+  regla); formulario conectado a /api/contacto.
