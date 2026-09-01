@@ -102,3 +102,20 @@ REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente)
   contacto exclusivo por formulario. Verificado: schema.org
   correctamente sin campo "telephone" (coherente con esa misma
   regla); formulario conectado a /api/contacto.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente — repo 32/48):
+- No aplica: enlace de Cal.com, mensaje de WhatsApp y botón de
+  teléfono — esta web usa la regla especial de contacto exclusivo por
+  formulario (sin teléfono, sin WhatsApp, sin Cal.com, sin chatbot),
+  ya documentada arriba.
+- Verificado: el correo soporte@kelatos.com no aparece visible.
+- Verificado: el menú móvil ya se cerraba correctamente al pulsar un
+  enlace.
+- Verificado: sin iconos ni imágenes con proporciones fijas
+  incorrectas.
+- Verificado: el H1 en móvil ya está en 48px.
+- Verificado: el único CTA del hero (.hero-cta) ya tenía
+  border-radius:999px y un estado hover que oscurece el fondo; no
+  requería cambios.
+- Verificado: este repo no usa el patrón de franja de insignias bajo
+  el H1 (familia Dyson); no aplica la reubicación.
