@@ -119,3 +119,14 @@ REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente 
   requería cambios.
 - Verificado: este repo no usa el patrón de franja de insignias bajo
   el H1 (familia Dyson); no aplica la reubicación.
+
+REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
+- BUG REAL — la franja de aviso de independencia estaba dentro de
+  <header>. Movida fuera de <header>, como hermana justo después de
+  él y antes del hero: sigue siendo la misma franja amarilla de ancho
+  completo.
+- Verificado: el header (.header{position:sticky;top:0}) ya se
+  mantenía fijo/pegado arriba al hacer scroll; no requería cambios.
+- Verificado de nuevo: el resto del checklist ya estaba correcto (esta
+  web usa la regla especial de contacto exclusivo por formulario, sin
+  teléfono/WhatsApp/Cal.com); no requería cambios.
