@@ -130,3 +130,13 @@ REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
 - Verificado de nuevo: el resto del checklist ya estaba correcto (esta
   web usa la regla especial de contacto exclusivo por formulario, sin
   teléfono/WhatsApp/Cal.com); no requería cambios.
+
+REVISIÓN ADICIONAL (a petición del cliente — "el menú se ve mal en escritorio"):
+- BUG REAL — el menú de escritorio (.links) tenía 6 elementos (5
+  enlaces + la píldora "Formulario de contacto") sin white-space:
+  nowrap, así que en anchos de escritorio intermedios (portátiles
+  ~1024-1280px) el texto de los enlaces se partía en dos líneas,
+  descuadrando la barra de navegación. Mismo patrón ya corregido en
+  Tech4You/RecoverLab. Añadido white-space:nowrap a .links a y
+  reducidos gap (23px→16px) y font-size (14px→13.5px) para que quepan
+  en una sola línea.
